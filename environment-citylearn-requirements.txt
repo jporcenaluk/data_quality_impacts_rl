@@ -1,0 +1,39 @@
+# data processing
+pandas
+pyarrow
+
+# simulation
+CityLearn==2.3.1
+stable-baselines3
+# sb3-contrib
+wandb==0.21.0
+
+# experimental jax with stablebaselines (up to 20x faster training)
+sbx-rl==0.22.0
+tf-keras==2.19.0
+jax[cuda12]==0.6.2
+nvidia-cudnn-cu12>=9.8,<10
+
+# reporting
+tensorboard
+protobuf>=5.28.3
+tensorflow
+plotly
+seaborn
+ipykernel
+# datamodel-code-generation
+
+# testing
+pytest
+
+# # requirements found at https://github.com/intelligent-environments-lab/CityLearn/blob/master/requirements.txt
+# # openstudio<=3.3.0 -- make sure this is installed beforehand
+# torch
+# torchvision
+# simplejson
+# scikit-learn<=1.2.2
+# pyyaml
+# numpy<2.0.0
+# nrel-pysam
+# gymnasium
+# doe_xstock>=1.0.1

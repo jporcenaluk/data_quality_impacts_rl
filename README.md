@@ -25,12 +25,6 @@ python3 -m pytest
 ### Folders
 
 `experiments` - holds all the code and output of experiments
-`glossary` - a smattering of terms that may be used (incomplete, could be deleted)
-`journal` - memos about the project as it unfolded
-`literature_review` - lit review (precursor to the capstone project as a whole)
-`eda`- graveyard of exploratory notebooks
-`thesis` - the thesis
-`thesis_template` - the original template as provided by University of Galway to write the thesis
 
 ### Running Experiments
 
