@@ -26,6 +26,10 @@ python3 -m pytest
 
 `experiments` - holds all the code and output of experiments
 
+### Regenerating data
+
+Go to data/README.md about how to re-generate data.
+
 ### Running Experiments
 
 Before running any experiments, look at the `run_sample.py`, `run_experiments.py`, and `run_reports.py` files under the `experiments` folder. Change any hard-coded constants at the top of the file; these are intended to be run-specific.

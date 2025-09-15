@@ -1,33 +1,25 @@
 # Data Readme
 
-The data we need is basically:
-
-* building data
-* carbon intensity data (how dirty the grid is)
-* weather data (for making predictions)
-
-This allows CityLearn to learn what carbon intensity the grid is, and what the weather will be like, and use that information to decide whether to store energy or use it.
-
-`.ipynb` files that start with `0x` indicate what processes to run, and in what order. Consider it a poor substitute for a proper data pipeline. You are the pipeline. Be the pipeline.
-
-## Hourly
-
-Data is captured or processed into hourly timesteps across 2023-01-01 00:00 to 2024-01-01 00:00
-
 ## Datasets
 
 Datasets are self-contained CityLearn environments that can be used for training. When ready, move files for buildings, weather, and carbon intensity into a directory under `datasets` and reference them in a `schema.json` to use them for training.
 
-## Building
+## Regenerating Data
 
-There exists a building on the Aran Islands. It has been anonymized.
+Go through and run these Jupyter notebooks in order:
 
-## Battery
+1. 01_preprocess/preprocess_building_real.ipynb
+2. 02_standard/standard.ipynb
+3. 03_clean/clean_real_building.ipynb
+4. 00_baseline.ipynb
+5. 01_dirty__building_power_dips.ipynb
+6. 02_dirty__building_outliers.ipynb
+7. (optional) visualise_building_data.ipynb - to see what is contained within building data
 
-Battery data is provided for buildings, but in the case of letting CityLearn _control_ the battery, it should not be used in the simulation (aside from the size, efficiency, etc. of the battery itself so CityLearn knows what kind of battery it is controlling).
+Then, move these files:
 
-## CSV Compression
+1. 03_clean/Building_01_baseline.csv -> datasets/baseline/Building_1_pristine.csv
+2. 03_clean/Building_01_dirty_01_power_dips.csv -> datasets/baseline/building_1_missing.csv
+3. 03_clean/Building_01_dirty_02_power_outliers.csv -> datasets/baseline/building_1_outliers.csv
 
-CSVs can get quite large. Use `csv_compressor.ipynb` to convert to parquet data format.
-
-
+Then you can re-run experiments.
