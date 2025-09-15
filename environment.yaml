@@ -1,0 +1,11 @@
+name: capstone
+channels:
+  - defaults
+dependencies:
+  - python=3.13
+  - seaborn
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - jupyter

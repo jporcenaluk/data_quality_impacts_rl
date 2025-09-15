@@ -1,0 +1,18 @@
+[project]
+name = "capstone"
+version = "0.0.1"
+
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"] 
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["experiments", "run_models", "report"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests"
+]
